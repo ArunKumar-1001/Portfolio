@@ -103,6 +103,20 @@
         font-size: 15px;
         text-align: justify;
       }
+      .card4 {
+        width: 400px;
+        padding: 20px 10px;
+        border: 3px solid blue;
+        border-radius: 20px;
+      }
+      .img4 {
+        width: 300px;
+        height: 200px;
+      }
+      .description4 {
+        font-size: 15px;
+        text-align: justify;
+      }
     }
   }
   .footer {
