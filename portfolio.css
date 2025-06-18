@@ -1,84 +1,89 @@
-:root {
-  --primary: #6c63ff;
-  --accent: #00c9a7;
-  --light: #f9f9f9;
-  --dark: #2d3436;
-}
+/* style.css */
 
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: var(--light);
-  color: var(--dark);
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 header {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
 }
 
 header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
+  margin: 0;
 }
 
-.subtitle {
-  font-size: 1.2em;
-  opacity: 0.95;
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
 }
 
-.contact {
-  margin-top: 10px;
-  font-size: 1em;
-}
-
-.contact a {
+.nav-links a {
   color: white;
   text-decoration: none;
-  margin: 0 8px;
 }
 
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+#hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e0e0e0;
 }
 
-h2 {
-  color: var(--primary);
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills span {
-  background-color: var(--primary);
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-size: 0.95em;
+#about,
+#projects,
+#certificates,
+#contact {
+  padding: 2rem 1rem;
 }
 
 ul {
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #eee;
-  font-size: 0.9em;
-  color: #555;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
 }
