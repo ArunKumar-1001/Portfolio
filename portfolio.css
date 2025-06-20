@@ -1,251 +1,106 @@
-/* ====== Global Styles ====== */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --text-color: #1f2937;
+  --bg-light: #f3f4f6;
+  --transition: all 0.3s ease;
+}
+
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text-color);
   line-height: 1.6;
 }
 
-h1,
-h2 {
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-}
-
-/* ====== Header and Navigation ====== */
-header {
-  background-color: #333;
-  color: white;
-  position: relative;
-  padding: 1rem 0;
-}
-
-header .menu-icon {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  position: absolute;
-  right: 1.5rem;
-  top: 1.2rem;
-}
-
-.slide-nav {
-  display: flex;
-  justify-content: center;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 1rem 0 0 0;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #ffd700;
-}
-
-/* ====== Hero Section ====== */
+/* Hero Section Enhancement */
 #hero {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #e0e0e0;
+  background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+  padding: 120px 0 80px;
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid #333;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
 }
 
-#hero h2 {
-  margin: 0.5rem 0;
-  font-size: 1.8rem;
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
-#hero p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-#hero button {
-  padding: 0.8rem 1.4rem;
-  background-color: #333;
-  color: white;
-  font-size: 1rem;
+/* Card Improvements */
+.card {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  overflow: hidden;
 }
 
-#hero button:hover {
-  background-color: #444;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ====== Generic Section Styles ====== */
-section {
-  padding: 2rem 1rem;
+/* Skill Cards Enhancement */
+.skills-card {
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
 }
 
-#about,
-#education,
-#projects,
-#certificates,
-#contact,
-#skills {
-  background-color: white;
-  margin: 1rem auto;
+.skills-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.skills-card:hover i {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  max-width: 900px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
-/* ====== Lists ====== */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
-li {
-  padding: 0.5rem 0;
-  font-size: 1rem;
+/* Section Spacing */
+section {
+  padding: 100px 0;
+  scroll-margin-top: 80px;
 }
 
-/* ====== Skills Section ====== */
-#skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-#skills li {
-  background-color: #f0f0f0;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-#skills li:hover {
-  background-color: #ddd;
-}
-
-/* ====== Contact Form ====== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-form input,
-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-form button {
-  background-color: #333;
-  color: white;
-  padding: 0.8rem 1.4rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #444;
-}
-
-/* ====== Social Icons Section ====== */
-#icons {
-  text-align: center;
-  padding: 1.5rem 0;
-}
-
-#icons .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-#icons a {
-  color: #333;
-  font-size: 2rem;
-  transition: color 0.3s ease;
-}
-
-#icons a:hover {
-  color: #0077b5; /* LinkedIn blue or GitHub gray */
-}
-
-/* ====== Footer ====== */
-footer {
-  text-align: center;
-  padding: 1.2rem;
-  background-color: #333;
-  color: white;
-}
-
-/* ====== Responsive Design ====== */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .slide-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  .profile-img {
+    width: 180px;
+    height: 180px;
   }
 
-  .slide-nav.active {
-    display: flex;
+  section {
+    padding: 60px 0;
   }
 
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-
-  #skills ul {
-    flex-direction: column;
-    align-items: center;
+  .skills-card {
+    padding: 1rem;
   }
 }
